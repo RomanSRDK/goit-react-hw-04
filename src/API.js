@@ -8,9 +8,8 @@ export const searchPhotos = async (searchName) => {
   const { data } = await axios.get(`search/photos${MY_API_KEY}`, {
     params: {
       query: searchName,
-      per_page: 15,
-      //   orientation: "portrait",
-      //   order_by: "latest",
+      per_page: 9,
+      orientation: "squarish",
     },
   });
   return data;

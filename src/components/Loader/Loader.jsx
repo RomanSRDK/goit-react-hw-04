@@ -1,5 +1,7 @@
+import { PropagateLoader } from "react-spinners";
+
 function Loader() {
-  return <div>Loader</div>;
+  return <PropagateLoader color="#2abde5" />;
 }
 
 export default Loader;
