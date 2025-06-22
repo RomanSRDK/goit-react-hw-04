@@ -1,7 +1,12 @@
-import { PropagateLoader } from "react-spinners";
+import { ClipLoader } from "react-spinners";
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+};
 
 function Loader() {
-  return <PropagateLoader color="#2abde5" />;
+  return <ClipLoader color="#191919" cssOverride={override} />;
 }
 
 export default Loader;
