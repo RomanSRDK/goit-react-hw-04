@@ -4,7 +4,11 @@ import styles from "./ImageGallery.module.css";
 function ImageGallery({ imageGallery, openModal }) {
   return (
     <ul className={styles.gallery}>
-      <ImageCard imageGallery={imageGallery} openModal={openModal} />
+      {imageGallery.map((image) => (
+        <li key={image.id} className={styles.galleryItem}>
+          <ImageCard image={image} openModal={openModal} />
+        </li>
+      ))}
     </ul>
   );
 }
