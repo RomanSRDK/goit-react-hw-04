@@ -9,7 +9,14 @@ function SearchBar({ onSearch }) {
     const value = input.value.trim();
 
     if (value === "") {
-      toast.error("Please enter a search query");
+      toast.error("What are you looking for?", {
+        icon: "👀",
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+      });
       return;
     }
 
@@ -24,7 +31,7 @@ function SearchBar({ onSearch }) {
         name="search"
         autoComplete="off"
         autoFocus
-        placeholder="Search images and photos"
+        placeholder="Type it. See it. Love it"
         className={styles.input}
       />
       <button type="submit" className={styles.button}>
